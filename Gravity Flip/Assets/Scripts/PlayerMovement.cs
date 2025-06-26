@@ -12,8 +12,8 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundLayer;
 
     private Rigidbody2D rb;
-    private bool isGrounded;
-    private bool isAlive;
+    public static bool isGrounded;
+    public static bool isAlive;
 
     public SpriteRenderer spriteRenderer;
 
