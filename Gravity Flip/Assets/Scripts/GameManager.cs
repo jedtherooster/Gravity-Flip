@@ -25,7 +25,8 @@ public class GameManager : MonoBehaviour
 
         // Stop the players movement
         PlayerMovement.rb.linearVelocity = Vector2.zero;
-        Destroy(deathCamTarget);
+
+        //Destroy(deathCamTarget);
     }
 
     public static void checkpoint(Collider2D cpNum)
