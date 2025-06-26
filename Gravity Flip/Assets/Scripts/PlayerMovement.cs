@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour
@@ -11,11 +12,15 @@ public class PlayerMovement : MonoBehaviour
     public float groundCheckRadius = 0.5f;
     public LayerMask groundLayer;
 
+    [Header("Game Objects")]
+    public GameObject player;
+
     private Rigidbody2D rb;
     public static bool isGrounded;
     public static bool isAlive;
 
     public SpriteRenderer spriteRenderer;
+    
 
     private void Start()
     {
@@ -60,10 +65,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void untrackCamera()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        //cameraFollow.tracking = false;
-
-        Debug.Log("Camera Not Tracking");
+        if (collision.tag == "Kill")
+        {
+            GameManager.killPlayer(player, collision);
+        }
     }
 }
