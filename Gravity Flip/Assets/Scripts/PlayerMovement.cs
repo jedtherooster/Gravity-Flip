@@ -15,9 +15,9 @@ public class PlayerMovement : MonoBehaviour
     [Header("Game Objects")]
     public GameObject player;
 
-    private Rigidbody2D rb;
+    public static Rigidbody2D rb;
     public static bool isGrounded;
-    public static bool isAlive;
+    public static bool isAlive = true;
 
     public SpriteRenderer spriteRenderer;
     
@@ -69,7 +69,12 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.tag == "Kill")
         {
-            GameManager.killPlayer(player, collision);
+            GameManager.killPlayer(player, collision, spriteRenderer);
+        }
+
+        if (collision.tag == "Checkpoint")
+        {
+            GameManager.checkpoint(collision);
         }
     }
 }
