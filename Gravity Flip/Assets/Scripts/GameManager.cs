@@ -6,14 +6,15 @@ public class GameManager : MonoBehaviour
 {
     [Header("References")]
     public PlayerMovement playerMovement;
+    
 
     private static Vector3 lastCheckpointPos;
 
-    public static void killPlayer(GameObject player, Collider2D spike, SpriteRenderer playerSR)
+    public static void killPlayer(Collider2D spike)
     {
-        Debug.Log("Player Killed");
-
+        
         PlayerMovement.isAlive = false;
+        PlayerMovement.spotLight.SetActive(false);
 
         Vector3 deathPos = spike.transform.position;
         CameraFollow.shouldStopAtTarget = true;
@@ -25,8 +26,6 @@ public class GameManager : MonoBehaviour
 
         // Stop the players movement
         PlayerMovement.rb.linearVelocity = Vector2.zero;
-
-        //Destroy(deathCamTarget);
     }
 
     public static void checkpoint(Collider2D cpNum)
@@ -37,12 +36,11 @@ public class GameManager : MonoBehaviour
 
     private void respawnPlayer()
     {
-        Debug.Log("Player Respawned");
-
         PlayerMovement.isAlive = true;
         playerMovement.player.transform.position = lastCheckpointPos;
         playerMovement.spriteRenderer.enabled = true;
         CameraFollow.tracking = true;
+        PlayerMovement.spotLight.SetActive(true);
 
         CameraFollow.instance.SetTarget(playerMovement.player.transform);
     }

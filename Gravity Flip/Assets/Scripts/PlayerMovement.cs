@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Game Objects")]
     public GameObject player;
+    public static GameObject spotLight;
 
     public static Rigidbody2D rb;
     public static bool isGrounded;
@@ -25,6 +26,7 @@ public class PlayerMovement : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        spotLight = GameObject.Find("Spotlight");
         isAlive = true;
     }
 
@@ -69,7 +71,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.tag == "Kill")
         {
-            GameManager.killPlayer(player, collision, spriteRenderer);
+            GameManager.killPlayer(collision);
         }
 
         if (collision.tag == "Checkpoint")
