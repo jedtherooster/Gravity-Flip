@@ -15,6 +15,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Game Objects")]
     public GameObject player;
     public static GameObject spotLight;
+    public static GameObject innerLight;
 
     public static Rigidbody2D rb;
     public static bool isGrounded;
@@ -27,6 +28,7 @@ public class PlayerMovement : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         spotLight = GameObject.Find("Spotlight");
+        innerLight = GameObject.Find("Inner Glow");
         isAlive = true;
     }
 

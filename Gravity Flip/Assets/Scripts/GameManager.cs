@@ -15,6 +15,7 @@ public class GameManager : MonoBehaviour
         
         PlayerMovement.isAlive = false;
         PlayerMovement.spotLight.SetActive(false);
+        PlayerMovement.innerLight.SetActive(false);
 
         Vector3 deathPos = spike.transform.position;
         CameraFollow.shouldStopAtTarget = true;
@@ -41,6 +42,7 @@ public class GameManager : MonoBehaviour
         playerMovement.spriteRenderer.enabled = true;
         CameraFollow.tracking = true;
         PlayerMovement.spotLight.SetActive(true);
+        PlayerMovement.innerLight.SetActive(true);
 
         CameraFollow.instance.SetTarget(playerMovement.player.transform);
     }
