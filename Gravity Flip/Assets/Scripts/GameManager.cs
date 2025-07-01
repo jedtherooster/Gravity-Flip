@@ -1,3 +1,4 @@
+using System;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
@@ -6,8 +7,8 @@ public class GameManager : MonoBehaviour
 {
     [Header("References")]
     public PlayerMovement playerMovement;
-    
 
+    private Vector3 playerScale;
     private static Vector3 lastCheckpointPos;
 
     public static void killPlayer(Collider2D spike)
@@ -43,8 +44,16 @@ public class GameManager : MonoBehaviour
         CameraFollow.tracking = true;
         PlayerMovement.spotLight.SetActive(true);
         PlayerMovement.innerLight.SetActive(true);
+        
+        playerMovement.transform.localScale = playerScale;
+        PlayerMovement.rb.gravityScale = 2.5f;
 
         CameraFollow.instance.SetTarget(playerMovement.player.transform);
+    }
+
+    private void Start()
+    {
+        playerScale = playerMovement.player.transform.localScale;
     }
 
     private void Update()
