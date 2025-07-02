@@ -3,6 +3,7 @@ using UnityEngine;
 public class GravityFlip : MonoBehaviour
 {
     private Rigidbody2D rb;
+    public bool canFlip = false;
 
     private void Start()
     {
@@ -12,13 +13,16 @@ public class GravityFlip : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && PlayerMovement.isGrounded && PlayerMovement.isAlive)
+        if (canFlip)
         {
-            flipGravity();
+            if (Input.GetKeyDown(KeyCode.Space) && PlayerMovement.isGrounded && PlayerMovement.isAlive)
+            {
+                flipGravity();
+            }
         }
     }
 
-    void flipGravity()
+    public void flipGravity()
     {
         rb.gravityScale *= -1;
 

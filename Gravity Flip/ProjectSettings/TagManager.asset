@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Kill
   - Checkpoint
+  - Limit Gravity
+  - Enable Gravity
   layers:
   - Default
   - TransparentFX

@@ -23,6 +23,7 @@ public class PlayerMovement : MonoBehaviour
 
     public SpriteRenderer spriteRenderer;
     public Animator animator;
+    public GravityFlip gravityFlip;
 
     private void Start()
     {
@@ -97,6 +98,17 @@ public class PlayerMovement : MonoBehaviour
         if (collision.tag == "Checkpoint")
         {
             GameManager.checkpoint(collision);
+        }
+
+        if (collision.tag == "Limit Gravity")
+        {
+            gravityFlip.flipGravity();
+            gravityFlip.canFlip = false;
+        }
+
+        if (collision.tag == "Enable Gravity")
+        {
+            gravityFlip.canFlip = true;
         }
     }
 }
