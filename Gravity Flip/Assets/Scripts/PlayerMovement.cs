@@ -22,7 +22,7 @@ public class PlayerMovement : MonoBehaviour
     public static bool isAlive = true;
 
     public SpriteRenderer spriteRenderer;
-    
+    public Animator animator;
 
     private void Start()
     {
@@ -40,11 +40,21 @@ public class PlayerMovement : MonoBehaviour
             float moveInput = Input.GetAxisRaw("Horizontal");
             rb.linearVelocity = new Vector2(moveInput * moveSpeed, rb.linearVelocity.y);
 
+            if (moveInput != 0 && isGrounded)
+            {
+                animator.SetBool("isRunning", true);
+            }
+            else
+            {
+                animator.SetBool("isRunning", false);
+            }
+
             // Check for jump
             isGrounded = Physics2D.OverlapCircle(groundCheck.position, groundCheckRadius, groundLayer);
 
             if (Input.GetKeyDown(KeyCode.W) && isGrounded || Input.GetKeyDown(KeyCode.UpArrow) && isGrounded)
             {
+                
                 if (rb.gravityScale > 0f)
                 {
                     rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
@@ -54,14 +64,22 @@ public class PlayerMovement : MonoBehaviour
                 }
             }
 
+            if (!isGrounded)
+            {
+                animator.enabled = false; // Show jump sprite
+            } else
+            {
+                animator.enabled = true; // Hide jump sprite
+            }
+
             if (Input.GetKeyDown(KeyCode.D) || Input.GetKeyDown(KeyCode.RightArrow))
             {
-                spriteRenderer.flipX = true;
+                spriteRenderer.flipX = false;
             }
 
             if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.LeftArrow))
             {
-                spriteRenderer.flipX = false;
+                spriteRenderer.flipX = true;
             }
         } else
         {
