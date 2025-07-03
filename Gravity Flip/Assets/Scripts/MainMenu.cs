@@ -4,9 +4,14 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
 
-    public void PlayGame()
+    public void PlayTutorial()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        SceneManager.LoadScene(1);  // Scene 1 = Turorial Level
+    }
+
+    public void SkipTutorial()
+    {
+        SceneManager.LoadScene(2);  // Scene 2 = Main Game
     }
 
     public void QuitGame()
