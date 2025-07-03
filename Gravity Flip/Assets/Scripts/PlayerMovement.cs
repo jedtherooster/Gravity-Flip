@@ -104,7 +104,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (collision.tag == "Limit Gravity")
         {
-            gravityFlip.flipGravity();
+            gravityFlip.resetGravity();
             gravityFlip.canFlip = false;
         }
 

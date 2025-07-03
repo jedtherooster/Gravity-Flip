@@ -30,4 +30,13 @@ public class GravityFlip : MonoBehaviour
         scale.y *= -1;
         transform.localScale = scale;
     }
+
+    public void resetGravity()
+    {
+        rb.gravityScale = 2.5f;
+        
+        Vector3 scale = transform.localScale;
+        scale.y *= -1;
+        transform.localScale = scale;
+    }
 }
