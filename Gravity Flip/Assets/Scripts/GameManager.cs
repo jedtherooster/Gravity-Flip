@@ -1,17 +1,23 @@
 using System;
+using System.Collections;
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
     [Header("References")]
     public PlayerMovement playerMovement;
+    public Animator transition;
+
+    [Header("Settings")] 
+    public float transitionDuration = 1f;
 
     private Vector3 playerScale;
     private static Vector3 lastCheckpointPos;
 
-    public static void killPlayer(Collider2D spike)
+    public void killPlayer(Collider2D spike)
     {
         
         PlayerMovement.isAlive = false;
@@ -49,6 +55,20 @@ public class GameManager : MonoBehaviour
         PlayerMovement.rb.gravityScale = 2.5f;
 
         CameraFollow.instance.SetTarget(playerMovement.player.transform);
+    }
+
+    public void loadNextLevel(int sceneIndex)
+    {
+        StartCoroutine(loadLevel(sceneIndex));
+    }
+
+    IEnumerator loadLevel(int levelIndex)
+    {
+        transition.SetTrigger("Start");
+        
+        yield return new WaitForSeconds(transitionDuration);
+        
+        SceneManager.LoadScene(levelIndex);
     }
 
     private void Start()

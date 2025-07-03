@@ -8,6 +8,7 @@ TagManager:
   - Checkpoint
   - Limit Gravity
   - Enable Gravity
+  - End Tutorial
   layers:
   - Default
   - TransparentFX

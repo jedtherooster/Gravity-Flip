@@ -25,6 +25,7 @@ public class PlayerMovement : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public Animator animator;
     public GravityFlip gravityFlip;
+    public GameManager gameManager;
 
     private void Start()
     {
@@ -93,7 +94,7 @@ public class PlayerMovement : MonoBehaviour
     {
         if (collision.tag == "Kill")
         {
-            GameManager.killPlayer(collision);
+            gameManager.killPlayer(collision);
         }
 
         if (collision.tag == "Checkpoint")
@@ -114,7 +115,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (collision.tag == "End Tutorial")
         {
-            SceneManager.LoadScene(2); // Scene 2 = Main Game
+            gameManager.loadNextLevel(2);   // Scene 2 = Main Game
         }
     }
 }
