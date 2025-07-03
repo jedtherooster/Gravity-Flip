@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 3289756960682071723}
   - component: {fileID: 8103091828588473215}
   m_Layer: 0
-  m_Name: Enable Gravity Zone
-  m_TagString: Enable Gravity
+  m_Name: Limit Gravity Zone
+  m_TagString: Limit Gravity
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -27,7 +27,7 @@ Transform:
   m_GameObject: {fileID: 8987366600632595852}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 86.6586, y: 14.4844, z: 0}
+  m_LocalPosition: {x: 86.6586, y: 14.6016, z: 0}
   m_LocalScale: {x: 11.5884495, y: 1.62303, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -74,11 +74,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: 1726184631
+  m_SortingLayer: -2
   m_SortingOrder: -1
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 0.5333599, g: 0.745283, b: 0.39021894, a: 0.019607844}
+  m_Color: {r: 1, g: 0.4669811, b: 0.5227946, a: 0.019607844}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
