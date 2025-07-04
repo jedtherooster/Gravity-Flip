@@ -21,6 +21,7 @@ public class PlayerMovement : MonoBehaviour
     public static Rigidbody2D rb;
     public static bool isGrounded;
     public static bool isAlive = true;
+    public bool canMove = true;
 
     public SpriteRenderer spriteRenderer;
     public Animator animator;
@@ -37,7 +38,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        if (isAlive)
+        if (isAlive && canMove)
         {
             //Horizontal Movement
             float moveInput = Input.GetAxisRaw("Horizontal");
@@ -84,10 +85,15 @@ public class PlayerMovement : MonoBehaviour
             {
                 spriteRenderer.flipX = true;
             }
-        } else
+        } else if (!isAlive)
         {
             spriteRenderer.enabled = false;
         }
+        else
+        {
+            rb.linearVelocity = Vector2.zero;
+        }
+        
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -120,8 +126,13 @@ public class PlayerMovement : MonoBehaviour
 
         if (collision.tag == "Credit")
         {
-            gameManager.playerCredits++;
+            gameManager.addCredits(1);
             Destroy(collision.gameObject);
+        }
+
+        if (collision.tag == "Shop")
+        {
+            gameManager.loadShop();
         }
     }
 }

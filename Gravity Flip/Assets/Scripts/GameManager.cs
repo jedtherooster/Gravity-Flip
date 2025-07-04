@@ -10,6 +10,8 @@ public class GameManager : MonoBehaviour
     [Header("References")]
     public PlayerMovement playerMovement;
     public Animator transition;
+    public TextMeshProUGUI playerCreditsText;
+    public GameObject shopScreen;
 
     [Header("Settings")] 
     public float transitionDuration = 1f;
@@ -72,6 +74,23 @@ public class GameManager : MonoBehaviour
         yield return new WaitForSeconds(transitionDuration);
         
         SceneManager.LoadScene(levelIndex);
+    }
+
+    public void addCredits(int amount)
+    {
+        playerCredits += amount;
+        playerCreditsText.text = playerCredits.ToString();
+    }
+
+    public void loadShop()
+    {
+        shopScreen.SetActive(true);
+        playerMovement.canMove = false;
+    }
+
+    public void resumeGame()
+    {
+        playerMovement.canMove = true;
     }
 
     private void Start()
