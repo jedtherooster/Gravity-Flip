@@ -14,6 +14,9 @@ public class GameManager : MonoBehaviour
     [Header("Settings")] 
     public float transitionDuration = 1f;
 
+    [Header("Variables")] 
+    public int playerCredits;
+
     private Vector3 playerScale;
     private static Vector3 lastCheckpointPos;
 

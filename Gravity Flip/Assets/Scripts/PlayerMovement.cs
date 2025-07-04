@@ -117,5 +117,11 @@ public class PlayerMovement : MonoBehaviour
         {
             gameManager.loadNextLevel(2);   // Scene 2 = Main Game
         }
+
+        if (collision.tag == "Credit")
+        {
+            gameManager.playerCredits++;
+            Destroy(collision.gameObject);
+        }
     }
 }

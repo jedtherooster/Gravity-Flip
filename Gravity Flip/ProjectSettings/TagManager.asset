@@ -9,6 +9,7 @@ TagManager:
   - Limit Gravity
   - Enable Gravity
   - End Tutorial
+  - Shop
   layers:
   - Default
   - TransparentFX
