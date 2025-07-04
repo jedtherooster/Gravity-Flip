@@ -10,6 +10,7 @@ TagManager:
   - Enable Gravity
   - End Tutorial
   - Shop
+  - Credit
   layers:
   - Default
   - TransparentFX
