@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Gameplay Loop_0: 4449657820082178200
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
