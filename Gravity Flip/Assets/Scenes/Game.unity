@@ -7663,11 +7663,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2129941531646774054, guid: 8c1dcd79f52c94091ab64066b3b4bfcd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.9
+      value: -0.6
       objectReference: {fileID: 0}
     - target: {fileID: 2129941531646774054, guid: 8c1dcd79f52c94091ab64066b3b4bfcd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.24
+      value: -3.3
       objectReference: {fileID: 0}
     - target: {fileID: 2129941531646774054, guid: 8c1dcd79f52c94091ab64066b3b4bfcd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -7707,7 +7707,7 @@ PrefabInstance:
       objectReference: {fileID: 1285281750}
     - target: {fileID: 6804452034325276347, guid: 8c1dcd79f52c94091ab64066b3b4bfcd, type: 3}
       propertyPath: canFlip
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7557347841718973671, guid: 8c1dcd79f52c94091ab64066b3b4bfcd, type: 3}
       propertyPath: m_Name
