@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public Animator transition;
     public TextMeshProUGUI playerCreditsText;
     public GameObject shopScreen;
+    public GameObject gameOverScreen;
 
     [Header("Settings")] 
     public float transitionDuration = 1f;
@@ -39,6 +40,7 @@ public class GameManager : MonoBehaviour
 
         // Stop the players movement
         PlayerMovement.rb.linearVelocity = Vector2.zero;
+        gameOverScreen.SetActive(true);
     }
 
     public static void checkpoint(Collider2D cpNum)
@@ -47,8 +49,10 @@ public class GameManager : MonoBehaviour
         lastCheckpointPos = cpNum.transform.position;
     }
 
-    private void respawnPlayer()
+    public void respawnPlayer()
     {
+        gameOverScreen.SetActive(false);
+        
         PlayerMovement.isAlive = true;
         playerMovement.player.transform.position = lastCheckpointPos;
         playerMovement.spriteRenderer.enabled = true;
