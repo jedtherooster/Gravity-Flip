@@ -4947,7 +4947,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Allows the player to jump and fllip gravity as much as they want
+  m_text: Makes the camera wider, so you can see more of the map
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -6672,7 +6672,7 @@ MonoBehaviour:
     m_HighlightedColor: {r: 1, g: 1, b: 1, a: 1}
     m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
     m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 0}
-    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0}
+    m_DisabledColor: {r: 1, g: 1, b: 1, a: 0.3882353}
     m_ColorMultiplier: 1
     m_FadeDuration: 0.1
   m_SpriteState:
@@ -6690,7 +6690,31 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 866122090}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 866122089}
+        m_TargetAssemblyTypeName: UnityEngine.UI.Selectable, UnityEngine.UI
+        m_MethodName: set_interactable
+        m_Mode: 6
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 948429377}
+        m_TargetAssemblyTypeName: ShopMenu, Assembly-CSharp
+        m_MethodName: spotLightIncrease
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &866122090
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7160,7 +7184,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &948429377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7178,7 +7202,9 @@ MonoBehaviour:
   speedIncreaseCost: 2
   heightIncreaseCost: 2
   brighterSpotLightCost: 1
-  disableGroundCheckCost: 10
+  widerFovCost: 3
+  heightIncreasePanel: {fileID: 1480610958}
+  brighterSpotLightPanel: {fileID: 1284560022}
 --- !u!114 &948429378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8809,7 +8835,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Disable Ground Check
+  m_text: Wider FOV
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 01e8f4357ebc96942af23cf0008de2c1, type: 2}
   m_sharedMaterial: {fileID: 1088684720276213869, guid: 01e8f4357ebc96942af23cf0008de2c1, type: 2}
@@ -10072,7 +10098,7 @@ MonoBehaviour:
   shopScreen: {fileID: 948429376}
   gameOverScreen: {fileID: 1756204209}
   transitionDuration: 1
-  playerCredits: 0
+  playerCredits: 999
   gravityZonesEnabled: 1
 --- !u!1001 &1287931010
 PrefabInstance:
@@ -12751,7 +12777,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 10
+  m_text: 3
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
