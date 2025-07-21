@@ -19,6 +19,10 @@ public class ShopMenu : MonoBehaviour
     [Header("Panels")]
     public GameObject heightIncreasePanel;
     public GameObject brighterSpotLightPanel;
+    public GameObject widerFovPanel;
+    
+    [Header("Refereneces")]
+    public Camera mainCamera;
     
     public void speedIncrease()
     {
@@ -46,9 +50,9 @@ public class ShopMenu : MonoBehaviour
 
     public void spotLightIncrease()
     {
-        if (gameManager.playerCredits >= widerFovCost)
+        if (gameManager.playerCredits >= brighterSpotLightCost)
         {
-            gameManager.playerCredits -= widerFovCost;
+            gameManager.playerCredits -= brighterSpotLightCost;
             gameManager.playerCreditsText.text = gameManager.playerCredits.ToString();
 
             playerSpotlight.pointLightOuterRadius = 10f;
@@ -56,4 +60,5 @@ public class ShopMenu : MonoBehaviour
             brighterSpotLightPanel.SetActive(false);
         }
     }
+    
 }
