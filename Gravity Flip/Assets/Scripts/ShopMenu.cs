@@ -8,6 +8,9 @@ public class ShopMenu : MonoBehaviour
 
     [Header("Costs")] 
     public int speedIncreaseCost = 2;
+    public int heightIncreaseCost = 4;
+    public int brighterSpotLightCost = 1;
+    public int disableGroundCheckCost = 10;
     
     public void speedIncrease()
     {
@@ -17,6 +20,19 @@ public class ShopMenu : MonoBehaviour
             gameManager.playerCreditsText.text = gameManager.playerCredits.ToString();
         
             playerMovement.moveSpeed += 1;
+        }
+    }
+
+    public void heightIncrease()
+    {
+        if (gameManager.playerCredits >= heightIncreaseCost)
+        {
+            gameManager.playerCredits -= heightIncreaseCost;
+            gameManager.playerCreditsText.text = gameManager.playerCredits.ToString();
+
+            playerMovement.jumpForce += 5;
+            
+            // Disable the purchase button
         }
     }
 }

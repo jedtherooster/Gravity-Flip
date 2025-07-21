@@ -19,6 +19,7 @@ public class GameManager : MonoBehaviour
 
     [Header("Variables")] 
     public int playerCredits;
+    public bool gravityZonesEnabled = true;
 
     private Vector3 playerScale;
     private static Vector3 lastCheckpointPos;

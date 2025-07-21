@@ -2086,7 +2086,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 5
+  m_text: 4
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4143,11 +4143,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4839673450237633903, guid: 2b628a1ad93305b48b9d4ff416f0372d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 24.049551
+      value: 14.16759
       objectReference: {fileID: 0}
     - target: {fileID: 4839673450237633903, guid: 2b628a1ad93305b48b9d4ff416f0372d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 104.2191
+      value: 99.2781
       objectReference: {fileID: 0}
     - target: {fileID: 4839673450237633903, guid: 2b628a1ad93305b48b9d4ff416f0372d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -6380,7 +6380,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &948429377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6396,6 +6396,9 @@ MonoBehaviour:
   playerMovement: {fileID: 1761836073}
   gameManager: {fileID: 1285281750}
   speedIncreaseCost: 2
+  heightIncreaseCost: 2
+  brighterSpotLightCost: 1
+  disableGroundCheckCost: 10
 --- !u!114 &948429378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7430,11 +7433,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 4839673450237633903, guid: 2b628a1ad93305b48b9d4ff416f0372d, type: 3}
       propertyPath: m_LocalScale.x
-      value: 151.00089
+      value: 140.49123
       objectReference: {fileID: 0}
     - target: {fileID: 4839673450237633903, guid: 2b628a1ad93305b48b9d4ff416f0372d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 41.0114
+      value: 35.7537
       objectReference: {fileID: 0}
     - target: {fileID: 4839673450237633903, guid: 2b628a1ad93305b48b9d4ff416f0372d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -8937,6 +8940,7 @@ MonoBehaviour:
   gameOverScreen: {fileID: 1756204209}
   transitionDuration: 1
   playerCredits: 3
+  gravityZonesEnabled: 1
 --- !u!1001 &1287931010
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11172,7 +11176,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Disable Gravity Zones
+  m_text: Jump Height Increase
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 01e8f4357ebc96942af23cf0008de2c1, type: 2}
   m_sharedMaterial: {fileID: 1088684720276213869, guid: 01e8f4357ebc96942af23cf0008de2c1, type: 2}
@@ -13183,7 +13187,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: The player can flip gravity anywhere, no matter the zone
+  m_text: Increases the height the player can jump
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
