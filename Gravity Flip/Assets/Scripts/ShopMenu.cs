@@ -30,9 +30,8 @@ public class ShopMenu : MonoBehaviour
             gameManager.playerCredits -= heightIncreaseCost;
             gameManager.playerCreditsText.text = gameManager.playerCredits.ToString();
 
-            playerMovement.jumpForce += 5;
-            
-            // Disable the purchase button
+            playerMovement.jumpForce += 2;
+
         }
     }
 }
