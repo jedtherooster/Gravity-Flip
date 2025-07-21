@@ -4947,7 +4947,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Makes the camera wider, so you can see more of the map
+  m_text: Finish the game instantly
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7184,7 +7184,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &948429377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7199,12 +7199,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerMovement: {fileID: 1761836073}
   gameManager: {fileID: 1285281750}
+  playerSpotlight: {fileID: 1605343146}
   speedIncreaseCost: 2
   heightIncreaseCost: 2
   brighterSpotLightCost: 1
   widerFovCost: 3
   heightIncreasePanel: {fileID: 1480610958}
   brighterSpotLightPanel: {fileID: 1284560022}
+  widerFovPanel: {fileID: 1815151848}
+  mainCamera: {fileID: 519420031}
 --- !u!114 &948429378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8835,7 +8838,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Wider FOV
+  m_text: Teleport to end
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 01e8f4357ebc96942af23cf0008de2c1, type: 2}
   m_sharedMaterial: {fileID: 1088684720276213869, guid: 01e8f4357ebc96942af23cf0008de2c1, type: 2}
@@ -9057,11 +9060,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2129941531646774054, guid: 8c1dcd79f52c94091ab64066b3b4bfcd, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.1
+      value: -0.24
       objectReference: {fileID: 0}
     - target: {fileID: 2129941531646774054, guid: 8c1dcd79f52c94091ab64066b3b4bfcd, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.1
+      value: -2.99
       objectReference: {fileID: 0}
     - target: {fileID: 2129941531646774054, guid: 8c1dcd79f52c94091ab64066b3b4bfcd, type: 3}
       propertyPath: m_LocalPosition.z
@@ -9099,6 +9102,10 @@ PrefabInstance:
       propertyPath: gameManager
       value: 
       objectReference: {fileID: 1285281750}
+    - target: {fileID: 6250563749461536914, guid: 8c1dcd79f52c94091ab64066b3b4bfcd, type: 3}
+      propertyPath: m_Intensity
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 6804452034325276347, guid: 8c1dcd79f52c94091ab64066b3b4bfcd, type: 3}
       propertyPath: canFlip
       value: 0
@@ -12149,6 +12156,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f6762de6ae4f07247ae91f02368b3d43, type: 3}
+--- !u!114 &1605343146 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6250563749461536914, guid: 8c1dcd79f52c94091ab64066b3b4bfcd, type: 3}
+  m_PrefabInstance: {fileID: 1146743819}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 073797afb82c5a1438f328866b10b3f0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1614967069
 GameObject:
   m_ObjectHideFlags: 0
@@ -12777,7 +12795,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 3
+  m_text: 25
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
