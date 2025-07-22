@@ -7201,9 +7201,9 @@ MonoBehaviour:
   gameManager: {fileID: 1285281750}
   playerSpotlight: {fileID: 1605343146}
   speedIncreaseCost: 2
-  heightIncreaseCost: 2
+  heightIncreaseCost: 4
   brighterSpotLightCost: 1
-  widerFovCost: 3
+  widerFovCost: 25
   heightIncreasePanel: {fileID: 1480610958}
   brighterSpotLightPanel: {fileID: 1284560022}
   widerFovPanel: {fileID: 1815151848}
@@ -8597,7 +8597,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1193725253774711836, guid: b98b712043be11840abcd2fe172769af, type: 3}
       propertyPath: m_LocalScale.y
-      value: 7.632433
+      value: 7.4271207
       objectReference: {fileID: 0}
     - target: {fileID: 1193725253774711836, guid: b98b712043be11840abcd2fe172769af, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8605,7 +8605,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1193725253774711836, guid: b98b712043be11840abcd2fe172769af, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 43.1188
+      value: 43.2216
       objectReference: {fileID: 0}
     - target: {fileID: 1193725253774711836, guid: b98b712043be11840abcd2fe172769af, type: 3}
       propertyPath: m_LocalPosition.z
