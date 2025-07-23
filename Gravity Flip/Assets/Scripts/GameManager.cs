@@ -13,6 +13,7 @@ public class GameManager : MonoBehaviour
     public TextMeshProUGUI playerCreditsText;
     public GameObject shopScreen;
     public GameObject gameOverScreen;
+    public GameObject pauseScreen;
 
     [Header("Settings")] 
     public float transitionDuration = 1f;
@@ -111,6 +112,16 @@ public class GameManager : MonoBehaviour
             {
                 respawnPlayer();
             }
+        }
+
+        if (Input.GetKeyDown(KeyCode.Escape) && pauseScreen.activeSelf == false)
+        {
+            pauseScreen.SetActive(true);
+            playerMovement.canMove = false;
+        } else if (Input.GetKeyDown(KeyCode.Escape) && pauseScreen.activeSelf == true)
+        {
+            pauseScreen.SetActive(false);
+            playerMovement.canMove = true;
         }
     }
 }
