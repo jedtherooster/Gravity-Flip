@@ -134,5 +134,10 @@ public class PlayerMovement : MonoBehaviour
         {
             gameManager.loadShop();
         }
+
+        if (collision.tag == "End Game")
+        {
+            gameManager.returnToMenu();
+        }
     }
 }

@@ -99,6 +99,20 @@ public class GameManager : MonoBehaviour
         playerMovement.canMove = true;
     }
 
+    public void returnToMenu()
+    {
+        StartCoroutine(toMainMenu());
+    }
+
+    IEnumerator toMainMenu()
+    {
+        transition.SetTrigger("Start");
+        
+        yield return new WaitForSeconds(transitionDuration);
+        
+        SceneManager.LoadScene(0); // Scene 0 = Main Menu
+    }
+
     private void Start()
     {
         playerScale = playerMovement.player.transform.localScale;

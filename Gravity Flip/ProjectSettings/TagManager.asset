@@ -11,6 +11,7 @@ TagManager:
   - End Tutorial
   - Shop
   - Credit
+  - End Game
   layers:
   - Default
   - TransparentFX
