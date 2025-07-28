@@ -4,6 +4,7 @@ public class GravityFlip : MonoBehaviour
 {
     private Rigidbody2D rb;
     public bool canFlip = false;
+    private bool hasFlip;
 
     private void Start()
     {
@@ -15,10 +16,16 @@ public class GravityFlip : MonoBehaviour
     {
         if (canFlip)
         {
-            if (Input.GetKeyDown(KeyCode.Space) && PlayerMovement.isGrounded && PlayerMovement.isAlive)
+            if (Input.GetKeyDown(KeyCode.Space) && hasFlip && PlayerMovement.isAlive)
             {
                 flipGravity();
+                hasFlip = false;
             }
+        }
+
+        if (PlayerMovement.isGrounded)
+        {
+            hasFlip = true;
         }
     }
 
