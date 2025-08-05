@@ -113,6 +113,12 @@ public class GameManager : MonoBehaviour
         SceneManager.LoadScene(0); // Scene 0 = Main Menu
     }
 
+    public void loadPauseScreen()
+    {
+        pauseScreen.SetActive(true);
+        playerMovement.canMove = false;
+    }
+
     private void Start()
     {
         playerScale = playerMovement.player.transform.localScale;
@@ -130,8 +136,7 @@ public class GameManager : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Escape) && pauseScreen.activeSelf == false)
         {
-            pauseScreen.SetActive(true);
-            playerMovement.canMove = false;
+            loadPauseScreen();
         } else if (Input.GetKeyDown(KeyCode.Escape) && pauseScreen.activeSelf == true)
         {
             pauseScreen.SetActive(false);
