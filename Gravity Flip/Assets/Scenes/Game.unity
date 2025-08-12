@@ -5787,6 +5787,68 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8446b39d5d599bd4a953d14d1b6a5744, type: 3}
+--- !u!1001 &541703244
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1174009695}
+    m_Modifications:
+    - target: {fileID: 2805948146104766877, guid: 8e058b0bd0171934ba608c657bb4e231, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 38.56
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805948146104766877, guid: 8e058b0bd0171934ba608c657bb4e231, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.019980192
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805948146104766877, guid: 8e058b0bd0171934ba608c657bb4e231, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805948146104766877, guid: 8e058b0bd0171934ba608c657bb4e231, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805948146104766877, guid: 8e058b0bd0171934ba608c657bb4e231, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805948146104766877, guid: 8e058b0bd0171934ba608c657bb4e231, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805948146104766877, guid: 8e058b0bd0171934ba608c657bb4e231, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0000059604645
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805948146104766877, guid: 8e058b0bd0171934ba608c657bb4e231, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805948146104766877, guid: 8e058b0bd0171934ba608c657bb4e231, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805948146104766877, guid: 8e058b0bd0171934ba608c657bb4e231, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -359.999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280604430183008028, guid: 8e058b0bd0171934ba608c657bb4e231, type: 3}
+      propertyPath: m_Name
+      value: Spike Trio (26)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8e058b0bd0171934ba608c657bb4e231, type: 3}
+--- !u!4 &541703245 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2805948146104766877, guid: 8e058b0bd0171934ba608c657bb4e231, type: 3}
+  m_PrefabInstance: {fileID: 541703244}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &543649720
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12204,6 +12266,8 @@ Transform:
   - {fileID: 1414230843}
   - {fileID: 73955971}
   - {fileID: 1554353391}
+  - {fileID: 541703245}
+  - {fileID: 1379753774}
   - {fileID: 1537950448}
   - {fileID: 2133430072}
   m_Father: {fileID: 0}
@@ -13746,6 +13810,68 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8446b39d5d599bd4a953d14d1b6a5744, type: 3}
+--- !u!1001 &1379753773
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1174009695}
+    m_Modifications:
+    - target: {fileID: 2805948146104766877, guid: 8e058b0bd0171934ba608c657bb4e231, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 41.36
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805948146104766877, guid: 8e058b0bd0171934ba608c657bb4e231, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 19.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805948146104766877, guid: 8e058b0bd0171934ba608c657bb4e231, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805948146104766877, guid: 8e058b0bd0171934ba608c657bb4e231, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805948146104766877, guid: 8e058b0bd0171934ba608c657bb4e231, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805948146104766877, guid: 8e058b0bd0171934ba608c657bb4e231, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805948146104766877, guid: 8e058b0bd0171934ba608c657bb4e231, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.0000059604645
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805948146104766877, guid: 8e058b0bd0171934ba608c657bb4e231, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805948146104766877, guid: 8e058b0bd0171934ba608c657bb4e231, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2805948146104766877, guid: 8e058b0bd0171934ba608c657bb4e231, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -359.999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280604430183008028, guid: 8e058b0bd0171934ba608c657bb4e231, type: 3}
+      propertyPath: m_Name
+      value: Spike Trio (27)
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 8e058b0bd0171934ba608c657bb4e231, type: 3}
+--- !u!4 &1379753774 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2805948146104766877, guid: 8e058b0bd0171934ba608c657bb4e231, type: 3}
+  m_PrefabInstance: {fileID: 1379753773}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1389180677
 GameObject:
   m_ObjectHideFlags: 0
